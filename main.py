@@ -28,7 +28,7 @@ def index():
     pred = [0]
     form = CustomerDetails(request.form)
     if request.method == 'POST' and form.validate():
-# ['Current Loan Amount', 'Term', 'Annual Income', 'Years in current job','Current Credit Balance', 'Credit Score', 'Number of Open Accounts','Home Ownership']
+# ['Current Loan Amount', 'Term', 'Annual Income', 'Year in current job','Current Credit Balance', 'Credit Score', 'Number of Open Accounts','Home Ownership']
         pred = model.predict([[
             form.data['current_loan_amount'],
             form.data['term'],
